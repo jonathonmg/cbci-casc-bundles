@@ -4,14 +4,14 @@ jenkins:
   securityRealm:
     local:
       users:
-        - id: "tim"
-          name: "Tim Hosey"
+        - id: "jgolden"
+          name: "Jonathon Golden"
           password: ${decodeBase64:${adminPassword}}
           properties:
             - blueSteelRedirectOptOutProperty:
                 optOut: true
             - mailer:
-                emailAddress: "thosey@cloudbees.com"
+                emailAddress: "jgolden@cloudbees.com"
         - id: "orange"
           name: "Orange Demo"
           password: ${decodeBase64:${demoPassword}}
@@ -19,7 +19,7 @@ jenkins:
             - blueSteelRedirectOptOutProperty:
                 optOut: true
             - mailer:
-                emailAddress: "thosey+orange@cloudbees.com"
+                emailAddress: "jgolden+orange@cloudbees.com"
         - id: "purple"
           name: "Purple Demo"
           password: ${decodeBase64:${demoPassword}}
@@ -27,7 +27,7 @@ jenkins:
             - blueSteelRedirectOptOutProperty:
                 optOut: true
             - mailer:
-                emailAddress: "thosey+purple@cloudbees.com"
+                emailAddress: "jgolden+purple@cloudbees.com"
   primaryView:
     masters:
       jobFilters:
@@ -89,7 +89,7 @@ unclassified:
             defaultVersion: "main"
             scmSource:
               git:
-                remote: "https://github.com/timhosey/cbci-casc-bundles.git"
+                remote: "https://github.com/jonathonmg/cbci-casc-bundles.git"
                 traits:
                   - "gitBranchDiscovery"
     pollingPeriod: 120
@@ -100,7 +100,7 @@ unclassified:
     provisionControllerOnCreation: false
     fireAndForget: true
   cloudbeesPlatform:
-    url: "https://cd.tim.ps.beescloud.com/"
+    url: "https://cd.jgolden.ps.beescloud.com/"
   gitHubPluginConfig:
     configs:
       - credentialsId: "github-token"

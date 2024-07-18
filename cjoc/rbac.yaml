@@ -5,7 +5,7 @@ groups:
   - name: Administrators
     members:
       users:
-        - tim
+        - jgolden
     roles:
       - name: administrator
         grantedAt: current

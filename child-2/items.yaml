@@ -5,19 +5,19 @@ removeStrategy:
 items:
 - concurrentBuild: true
   kind: pipeline
-  displayName: notes-generator
+  displayName: 'Workflow Samples'
   resumeBlocked: false
-  name: notes-generator
+  name: workflow-samples
   description: ''
   definition:
     cpsScmFlowDefinition:
-      scriptPath: Jenkinsfile
+      scriptPath: Jenkinsfile.modern
       scm:
         gitSCM:
           userRemoteConfigs:
           - userRemoteConfig:
               credentialsId: github-ssh
-              url: 'git@github.com:timhosey/notes_generator.git'
+              url: 'git@github.com:jonathonmg/workflow-samples.git'
           branches:
           - branchSpec:
               name: '*/main'
