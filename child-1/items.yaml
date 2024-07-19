@@ -41,6 +41,34 @@ items:
     disabled: false
     displayName: "Pipeline Test"
     resumeBlocked: false
+  - kind: "pipeline"
+    name: "workflow-samples"
+    displayName: "Workflow Samples"
+    description: "Multi module maven project"
+    concurrentBuild: true
+    resumeBlocked: false
+    definition:
+      cpsScmFlowDefinition:
+        scriptPath: "Jenkinsfile.modern"
+        scm:
+          gitSCM:
+            userRemoteConfigs:
+            - userRemoteConfig:
+              credentialsId: "github-ssh"
+              url: "git@github.com:jonathonmg/workflow-samples.git"
+          branches:
+          - branchSpec:
+            name: "*/main"
+        lightweight: true
+    disabled: false
+    properties:
+    - buildDiscarder:
+        strategy:
+          logRotator:
+            artifactDaysToKeep: -1
+            artifactNumToKeep: -1
+            daysToKeep: 30
+            numToKeep: 5
   - kind: "cloudbeesTemplatedJob"
     name: "hello-world-test"
     catalog: "timPlateCatalog" 
