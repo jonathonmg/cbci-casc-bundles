@@ -43,10 +43,7 @@ items:
     resumeBlocked: false
   - kind: "pipeline"
     name: "workflow-samples"
-    displayName: "Workflow Samples"
-    description: "Multi module maven project"
     concurrentBuild: true
-    resumeBlocked: false
     definition:
       cpsScmFlowDefinition:
         scriptPath: "Jenkinsfile.modern"
@@ -54,13 +51,14 @@ items:
           gitSCM:
             userRemoteConfigs:
             - userRemoteConfig:
-              credentialsId: "github-ssh"
-              url: "git@github.com:jonathonmg/workflow-samples.git"
+                credentialsId: "github-ssh"
+                url: "git@github.com:jonathonmg/workflow-samples.git"
           branches:
           - branchSpec:
-            name: "*/main"
+              name: "*/main"
         lightweight: true
-    disabled: false
+    description: "Multi module maven project"
+    displayName: "Workflow Samples"
     properties:
     - buildDiscarder:
         strategy:
@@ -69,6 +67,7 @@ items:
             artifactNumToKeep: -1
             daysToKeep: 30
             numToKeep: 5
+    resumeBlocked: false
   - kind: "cloudbeesTemplatedJob"
     name: "hello-world-test"
     catalog: "timPlateCatalog" 
