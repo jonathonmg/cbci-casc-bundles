@@ -41,24 +41,25 @@ items:
     disabled: false
     displayName: "Pipeline Test"
     resumeBlocked: false
-  - kind: "pipeline"
-    name: "workflow-samples"
+  - kind: pipeline
+    name: workflow-samples
     concurrentBuild: true
     definition:
       cpsScmFlowDefinition:
-        scriptPath: "Jenkinsfile.modern"
+        scriptPath: Jenkinsfile.modern
         scm:
-          gitSCM:
+          scmGit:
             userRemoteConfigs:
             - userRemoteConfig:
-                credentialsId: "github-ssh"
-                url: "git@github.com:jonathonmg/workflow-samples.git"
-          branches:
-          - branchSpec:
-              name: "*/main"
+                credentialsId: jgoldenthunder-private
+                url: 'git@github.com:jonathonmg/workflow-samples.git'
+            branches:
+            - branchSpec:
+                name: '*/main'
         lightweight: true
-    description: "Multi module maven project"
-    displayName: "Workflow Samples"
+    description: Multi module maven project
+    disabled: false
+    displayName: Workflow Samples
     properties:
     - buildDiscarder:
         strategy:
