@@ -51,8 +51,7 @@ items:
           scmGit:
             userRemoteConfigs:
             - userRemoteConfig:
-                credentialsId: jgoldenthunder-private
-                url: 'git@github.com:jonathonmg/workflow-samples.git'
+                url: https://github.com/jonathonmg/workflow-samples.git
             branches:
             - branchSpec:
                 name: '*/main'
