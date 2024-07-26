@@ -1,0 +1,31 @@
+removeStrategy:
+  items: "none"
+  rbac: "sync"
+items:
+  - kind: pipeline
+    name: workflow-samples
+    concurrentBuild: true
+    definition:
+      cpsScmFlowDefinition:
+        scriptPath: Jenkinsfile.modern
+        scm:
+          scmGit:
+            userRemoteConfigs:
+            - userRemoteConfig:
+                url: https://github.com/jonathonmg/workflow-samples.git
+            branches:
+            - branchSpec:
+                name: '*/main'
+        lightweight: true
+    description: Multi module maven project
+    disabled: false
+    displayName: Workflow Samples
+    properties:
+    - buildDiscarder:
+        strategy:
+          logRotator:
+            artifactDaysToKeep: -1
+            artifactNumToKeep: -1
+            daysToKeep: 30
+            numToKeep: 5
+    resumeBlocked: false
