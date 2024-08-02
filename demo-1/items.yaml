@@ -3,7 +3,7 @@ removeStrategy:
   rbac: "sync"
 items:
   - kind: pipeline
-    name: workflow-samples
+    name: maven-samples
     concurrentBuild: true
     definition:
       cpsScmFlowDefinition:
@@ -12,7 +12,7 @@ items:
           scmGit:
             userRemoteConfigs:
             - userRemoteConfig:
-                url: https://github.com/jonathonmg/workflow-samples.git
+                url: https://github.com/jonathonmg/maven-samples.git
             branches:
             - branchSpec:
                 name: '*/main'
