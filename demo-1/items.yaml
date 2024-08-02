@@ -19,7 +19,7 @@ items:
         lightweight: true
     description: Multi module maven project
     disabled: false
-    displayName: Workflow Samples
+    displayName: Maven Samples
     properties:
     - buildDiscarder:
         strategy:
