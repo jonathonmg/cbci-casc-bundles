@@ -120,7 +120,7 @@ items:
       allowExceptions: false
   - sharedConfigurationOptOut:
       optOut: false
-  - kind: folder
+- kind: folder
   name: folder-1
   description: Some Description
   displayName: folder-1
