@@ -120,3 +120,11 @@ items:
       allowExceptions: false
   - sharedConfigurationOptOut:
       optOut: false
+  - kind: folder
+  name: folder-1
+  description: Some Description
+  displayName: folder-1
+  properties:
+  - envVars: {}
+  - itemRestrictions:
+      filter: false
