@@ -120,11 +120,3 @@ items:
       allowExceptions: false
   - sharedConfigurationOptOut:
       optOut: false
-- kind: folder
-  name: folder-1
-  description: ${cbciGithubJonathonmgAppKey}
-  displayName: folder-1
-  properties:
-  - envVars: {}
-  - itemRestrictions:
-      filter: false
