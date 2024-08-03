@@ -122,7 +122,7 @@ items:
       optOut: false
 - kind: folder
   name: folder-1
-  description: Some Description
+  description: ${cbciGithubJonathonmgAppKey}
   displayName: folder-1
   properties:
   - envVars: {}
