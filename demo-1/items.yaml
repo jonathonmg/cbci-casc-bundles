@@ -1,31 +1,39 @@
 removeStrategy:
-  items: "none"
-  rbac: "sync"
+  rbac: SYNC
+  items: NONE
 items:
-  - kind: pipeline
-    name: maven-samples
-    concurrentBuild: true
-    definition:
-      cpsScmFlowDefinition:
-        scriptPath: Jenkinsfile.modern
-        scm:
-          scmGit:
-            userRemoteConfigs:
-            - userRemoteConfig:
-                url: https://github.com/jonathonmg/maven-samples.git
-            branches:
-            - branchSpec:
-                name: '*/main'
-        lightweight: true
-    description: Multi module maven project
-    disabled: false
-    displayName: Maven Samples
-    properties:
-    - buildDiscarder:
-        strategy:
-          logRotator:
-            artifactDaysToKeep: -1
-            artifactNumToKeep: -1
-            daysToKeep: 30
-            numToKeep: 5
-    resumeBlocked: false
+- kind: folder
+  name: Folder-1
+  description: ''
+  displayName: Folder One
+  properties:
+  - envVars: {}
+  - itemRestrictions:
+      filter: false
+- kind: pipeline
+  name: maven-samples
+  concurrentBuild: true
+  definition:
+    cpsScmFlowDefinition:
+      scriptPath: Jenkinsfile.modern
+      scm:
+        scmGit:
+          userRemoteConfigs:
+          - userRemoteConfig:
+              url: https://github.com/jonathonmg/maven-samples.git
+          branches:
+          - branchSpec:
+              name: '*/main'
+      lightweight: true
+  description: Multi module maven project
+  disabled: false
+  displayName: Maven Samples
+  properties:
+  - buildDiscarder:
+      strategy:
+        logRotator:
+          artifactDaysToKeep: -1
+          artifactNumToKeep: -1
+          daysToKeep: 30
+          numToKeep: 5
+  resumeBlocked: false
