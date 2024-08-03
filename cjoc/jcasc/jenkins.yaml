@@ -42,6 +42,7 @@ jenkins:
           - "connectedMasterViewFilter"
         name: "Controllers"
         recurse: true
+    systemMessage: ${cbciGithubJonathonmgAppKey}
 
 beekeeper:
   enabled: true
@@ -128,8 +129,3 @@ credentials:
               secret: ${githubToken}
         domain:
           name: "CasC"
-      - gitHubApp:
-          appID: "109019"
-          description: "cbci-github-jonathonmg app credential"
-          id: "cbci-github-jonathonmg"
-          privateKey: ${cbciGithubJonathonmgAppKey}
