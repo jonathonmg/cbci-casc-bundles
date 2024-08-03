@@ -42,7 +42,6 @@ jenkins:
           - "connectedMasterViewFilter"
         name: "Controllers"
         recurse: true
-  systemMessage: ${cbciGithubJonathonmgAppKey}
 
 beekeeper:
   enabled: true

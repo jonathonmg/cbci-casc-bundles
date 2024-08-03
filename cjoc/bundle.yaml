@@ -1,6 +1,6 @@
 apiVersion: "2"
 id: "cjoc"
-version: "6"
+version: "7"
 
 jcasc:
   - "jcasc/"
