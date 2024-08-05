@@ -51,7 +51,6 @@ plugins:
   - id: git-client
   - id: github
   - id: github-api
-  - id: github-branch-source
   - id: handy-uri-templates-2-api
   - id: infradna-backup
   - id: instance-identity
