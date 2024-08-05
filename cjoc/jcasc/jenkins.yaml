@@ -126,5 +126,10 @@ credentials:
               id: "github-token"
               scope: GLOBAL
               secret: ${githubToken}
+          - gitHubApp:
+              appID: "109019"
+              description: "cbci-github-jonathonmg"
+              id: "cbci-github-jonathonmg"
+              privateKey: ${cbciGithubJonathonmgAppKey}
         domain:
           name: "CasC"
