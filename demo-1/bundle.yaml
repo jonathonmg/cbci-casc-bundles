@@ -1,7 +1,7 @@
 apiVersion: 2
 id: "demo-1"
 description: "Demo-1 CasC Setup"
-version: "8"
+version: "1"
 parent: "parent-bundle"
 plugins:
   - "plugins.yaml"
