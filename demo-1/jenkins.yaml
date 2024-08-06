@@ -22,12 +22,3 @@ unclassified:
   usageStatisticsCloudBees:
     disabledJenkinsUsageStatistics: true
     usageStatisticsCollected: false
-credentials:
-  system:
-    domainCredentials:
-    - credentials:
-      - gitHubApp:
-          appID: "109019"
-          description: "cbci-github-jonathonmg app credential"
-          id: "cbci-github-jonathonmg"
-          privateKey: ${cbciGithubJonathonmgAppKey}
