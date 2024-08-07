@@ -1,0 +1,59 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+- kind: organizationFolder
+  name: jonathonmg
+  displayName: Jonathon Michael Golden
+  navigators:
+  - github:
+      enableAvatar: true
+      apiUri: https://api.github.com
+      traits:
+      - gitHubBranchDiscovery:
+          strategyId: 1
+      - gitHubPullRequestDiscovery:
+          strategyId: 2
+      - gitHubForkDiscovery:
+          trust:
+            gitHubTrustPermissions: {}
+          strategyId: 2
+      repoOwner: jonathonmg
+      credentialsId: cbci-github-jonathonmg
+  orphanedItemStrategy:
+    defaultOrphanedItemStrategy:
+      pruneDeadBranches: true
+      daysToKeep: 30
+      numToKeep: 10
+      abortBuilds: false
+  projectFactories:
+  - workflowMultiBranchProjectFactory:
+      scriptPath: Jenkinsfile.modern
+  properties:
+  - organizationChildHealthMetricsProperty:
+      templates:
+      - worstChildHealthMetric:
+          recursive: true
+      - averageChildHealthMetric: {}
+      - jobStatusHealthMetric:
+          unstable: true
+          countVirginJobs: false
+          failure: true
+          success: true
+          unbuilt: true
+      - projectEnabledHealthMetric: {}
+  - organizationChildOrphanedItemsProperty:
+      strategy:
+        inherit: {}
+  - organizationChildTriggersProperty:
+      templates:
+      - periodicFolderTrigger:
+          interval: 1d
+  - envVars: {}
+  - suppressFolderAutomaticTriggering:
+      strategy: NONE
+      branches: .*
+  strategy:
+    allBranchesSame: {}
+  trigger:
+    periodicFolderTrigger:
+      interval: 1d
