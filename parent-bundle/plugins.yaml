@@ -31,7 +31,6 @@ plugins:
   - id: cloudbees-unified-ui
   - id: cloudbees-view-creation-filter
   - id: cloudbees-workflow-template
-  - id: cloudbees-workflow-ui
   - id: command-launcher
   - id: configuration-as-code
   - id: credentials
