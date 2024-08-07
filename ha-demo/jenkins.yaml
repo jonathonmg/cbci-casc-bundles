@@ -2,6 +2,11 @@ jenkins:
   systemMessage: |-
     ${controller_word} ${controller_child} #${controller_number}:
     Jenkins configured using CasC Child Inheritance
+highAvailability:
+  highAvailabilityConfiguration:
+    developerMode: true
+  highAvailabilityQueueThrottler:
+    maximumLoad: 0
 unclassified:
   buildDiscarders:
     configuredBuildDiscarders:
