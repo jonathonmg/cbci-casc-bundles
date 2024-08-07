@@ -1,6 +1,7 @@
 removeStrategy:
   rbac: SYNC
   items: NONE
+items:
 - kind: organizationFolder
   name: jonathonmg
   displayName: Jonathon Michael Golden
