@@ -4,12 +4,15 @@ removeStrategy:
 items:
 - kind: organizationFolder
   name: jonathonmg
-  displayName: Jonathon Michael Golden
+  displayName: jonathonmg
   navigators:
   - github:
       enableAvatar: true
       apiUri: https://api.github.com
       traits:
+      - sourceWildcardFilter:
+          excludes: ''
+          includes: ha-demo*
       - gitHubBranchDiscovery:
           strategyId: 1
       - gitHubPullRequestDiscovery:
@@ -19,12 +22,12 @@ items:
             gitHubTrustPermissions: {}
           strategyId: 2
       repoOwner: jonathonmg
-      credentialsId: cbci-github-jonathonmg
+      credentialsId: cbci-github-jonathonmg-ha-demos
   orphanedItemStrategy:
     defaultOrphanedItemStrategy:
       pruneDeadBranches: true
-      daysToKeep: 30
-      numToKeep: 10
+      daysToKeep: -1
+      numToKeep: -1
       abortBuilds: false
   projectFactories:
   - workflowMultiBranchProjectFactory:
@@ -51,7 +54,7 @@ items:
           interval: 1d
   - envVars: {}
   - suppressFolderAutomaticTriggering:
-      strategy: NONE
+      strategy: INDEXING
       branches: .*
   strategy:
     allBranchesSame: {}

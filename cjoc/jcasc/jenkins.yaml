@@ -131,5 +131,10 @@ credentials:
               description: "cbci-github-jonathonmg"
               id: "cbci-github-jonathonmg"
               privateKey: ${cbciGithubJonathonmgAppKey}
+          - gitHubApp:
+              appID: "966497"
+              description: " cbci-github-jonathonmg-ha-demos"
+              id: "cbci-github-jonathonmg-ha-demos"
+              privateKey: ${cbciGithubHaDemosJonathonmgAppKey}
         domain:
           name: "CasC"
