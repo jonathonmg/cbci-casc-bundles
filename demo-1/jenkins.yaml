@@ -26,19 +26,6 @@ globalCloudBeesPipelineTemplateCatalog:
   catalogs:
   - branchOrTag: "main"
     scm:
-      github:
-        configuredByUrl: true
-        credentialsId: "cbci-github-jonathonmg"
-        id: "c2bbc51c-3f21-40cb-85d1-7f5256ee666d"
-        repoOwner: "jonathonmg"
-        repository: "pipeline-template-catalog"
-        repositoryUrl: "https://github.com/jonathonmg/pipeline-template-catalog.git"
-        traits:
-        - gitHubBranchDiscovery:
-            strategyId: 1
-        - gitHubPullRequestDiscovery:
-            strategyId: 2
-        - gitHubForkDiscovery:
-            strategyId: 2
-            trust: "gitHubTrustPermissions"
+      git:
+        remote: "https://github.com/jonathonmg/pipeline-template-catalog.git"
     updateInterval: "1d"
