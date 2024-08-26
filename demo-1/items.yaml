@@ -18,6 +18,8 @@ items:
       enableAvatar: true
       apiUri: https://api.github.com
       traits:
+      - gitHubTopicsFilter:
+          topicList: demo-1
       - gitHubBranchDiscovery:
           strategyId: 1
       - gitHubPullRequestDiscovery:
