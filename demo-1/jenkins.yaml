@@ -22,6 +22,8 @@ unclassified:
   usageStatisticsCloudBees:
     disabledJenkinsUsageStatistics: true
     usageStatisticsCollected: false
+  workspaceCache:
+    cacheManager: "s3"
 globalCloudBeesPipelineTemplateCatalog:
   catalogs:
   - branchOrTag: "main"
@@ -29,3 +31,12 @@ globalCloudBeesPipelineTemplateCatalog:
       git:
         remote: "https://github.com/jonathonmg/pipeline-template-catalog.git"
     updateInterval: "1d"
+aws:
+  awsCredentials:
+    region: "us-east-1"
+  s3:
+    container: "jgolden-sda-cbci-cache"
+    disableSessionToken: false
+    useHttp: false
+    usePathStyleUrl: false
+    useTransferAcceleration: false
