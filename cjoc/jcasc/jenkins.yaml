@@ -97,7 +97,7 @@ unclassified:
   bundleUpdateTiming:
     automaticReload: true
   cascAutoControllerProvisioning:
-    provisionControllerOnCreation: false
+    provisionControllerOnCreation: true
     fireAndForget: true
   cloudbeesPlatform:
     url: "https://cd.jgolden.ps.beescloud.com/"
