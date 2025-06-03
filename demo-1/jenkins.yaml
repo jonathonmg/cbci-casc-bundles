@@ -24,6 +24,8 @@ unclassified:
     usageStatisticsCollected: false
   workspaceCache:
     cacheManager: "s3"
+  cloudbeesPipelineExplorer:
+    pluggableStorageEnabled: true
 globalCloudBeesPipelineTemplateCatalog:
   catalogs:
   - branchOrTag: "main"
